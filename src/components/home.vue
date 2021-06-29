@@ -15,12 +15,14 @@
         <div class="row mb-5">
             <div class="col-lg-3 col-sm-6" v-for="(item,i) in pdata" :key="i">
                 <img :src="pdata[i].images" alt="" class="w-100">
-            {{pdata[i].title}}
+            <div @click="$emit('pOpen',pdata[i].id)">{{pdata[i].title}}</div>
+            <div @click="$emit('pOpen',pdata[i].id)">{{pdata[i].content}}</div>
+            <div @click="$emit('pOpen',pdata[i].id)">{{pdata[i].price}}</div>
             </div>
         </div>
-        <dir class="btn btn-primary m-auto d-block" style="width:100px">
+        <div class="btn btn-primary m-auto d-block" style="width:100px">
         <router-link to="/shop">바로가기</router-link>
-        </dir>
+        </div>
     </div>
 
 

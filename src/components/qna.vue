@@ -1,8 +1,8 @@
 <template>
-  <h2>문의사항</h2>
+  <h2>riview</h2>
 <table class="table">
   <thead>
-    <tr class="text-center">
+    <tr>
       <th scope="col">#</th>
       <th scope="col">제목</th>
       <th scope="col">내용</th>
@@ -10,8 +10,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr v-for="(item,i) in bdata" :key="i">
-      <th scope="row">{{bdata[i].idx}}</th>
+    <tr v-for="(item,i) in adata" :key="i">
+      <th scope="row">{{adata[i].idx}}</th>
       <td>{{bdata[i].title}}</td>
       <td>{{bdata[i].content}}</td>
       <td>{{bdata[i].date}}</td>
@@ -23,8 +23,8 @@
 </template>
 <script>
 export default {
-  name:"Q&A",
-  props:['bdata'],
+  name:"review",
+  props:['adata'],
     
   
 }
